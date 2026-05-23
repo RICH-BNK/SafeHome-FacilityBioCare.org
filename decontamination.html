@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decontamination | SafeHome & Facility BioCare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #1e2a3e; background: #fff; line-height: 1.5; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .navbar { background: rgba(255,255,255,0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(44,122,77,0.2); position: sticky; top: 0; z-index: 100; width: 100%; }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 10px 24px; max-width: 1400px; margin: 0 auto; gap: 1rem; }
+        .logo h1 { font-family: 'Space Grotesk', monospace; font-size: 1.3rem; font-weight: 800; background: linear-gradient(135deg, #0f3b2c, #2c7a4d); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -0.02em; line-height: 1.2; }
+        .logo p { font-size: 0.6rem; font-weight: 600; color: #2c7a4d; letter-spacing: 0.8px; }
+        .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; flex-wrap: wrap; }
+        .nav-links li a { text-decoration: none; font-family: 'Inter','Space Grotesk',sans-serif; font-weight: 580; font-size: 0.9rem; padding: 0.3rem 0; position: relative; display: inline-block; transition: all 0.25s; background: linear-gradient(120deg,#0f2b1f,#2c5a3e); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .nav-links li a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0%; height: 2px; background: linear-gradient(95deg,#2c7a4d,#4c9f6e); border-radius: 4px; transition: width 0.35s; }
+        .nav-links li a:hover::after { width: 100%; }
+        .btn-outline { font-family: 'Inter','Space Grotesk',sans-serif; font-weight: 600; font-size: 0.85rem; background: transparent; border: 1.5px solid rgba(44,122,77,0.6); padding: 0.4rem 1.2rem; border-radius: 60px; color: #1f5a38; transition: 0.28s; display: inline-block; white-space: nowrap; }
+        .btn-outline:hover { background: linear-gradient(105deg,#2c7a4d,#226a42); border-color: transparent; color: white !important; transform: scale(1.02) translateY(-2px); box-shadow: 0 12px 20px -10px rgba(44,122,77,0.4); }
+        .btn-primary { background: #2c7a4d; color: white; border: none; padding: 12px 28px; border-radius: 40px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.2s; display: inline-block; text-decoration: none; }
+        .btn-primary:hover { background: #1f5a38; transform: translateY(-2px); }
+        .service-hero { background: linear-gradient(135deg, #e9f5ef, #d0e6db); padding: 60px 0; text-align: center; }
+        .service-hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; color: #0a2e22; }
+        .service-content { display: flex; flex-wrap: wrap; gap: 50px; padding: 60px 0; align-items: center; }
+        .service-text { flex: 1; padding-left: 2%;}
+        .service-text h2 { font-size: 1.8rem; margin-bottom: 20px; color: #0a2e22; }
+        .service-text p { margin-bottom: 16px; color: #2d3e4a; }
+        .service-text ul { margin-left: 20px; margin-bottom: 24px; }
+        .service-text li { margin-bottom: 10px; list-style: none; display: flex; align-items: center; gap: 10px; }
+        .service-text li i { color: #2c7a4d; width: 24px; }
+        .service-image { flex: 1; }
+        .service-image img { width: 100%; border-radius: 28px; box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .cta-section { text-align: center; padding: 40px; background: #f4f9f6; border-radius: 32px; margin: 40px 0; }
+        footer { background: #0a2e22; color: #cadfd4; padding: 48px 0 24px; margin-top: 40px; }
+        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 40px; }
+        .footer-col h4 { color: white; margin-bottom: 16px; font-family: 'Space Grotesk',sans-serif; }
+        .footer-col a, .footer-col p { color: #cadfd4; text-decoration: none; display: block; margin-bottom: 8px; }
+        .copyright { text-align: center; border-top: 1px solid #2e5a48; padding-top: 24px; }
+        @media (max-width:800px) { .nav-container { flex-direction: column; } .nav-links { justify-content: center; } .service-content { flex-direction: column; text-align: center; } }
+    </style>
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+        <div class="logo"><h1>Safe<br>Home<span style="color:#2c7a4d;">&</span>Facility<br>BioCare</h1><p>PROTECTING HEALTH · SECURING SPACE</p></div>
+        <ul class="nav-links">
+            <li><a href="safehome&facilitybiocare.html">Home</a></li>
+            <li><a href="safehome&facilitybiocare.html#about">About Us</a></li>
+            <li><a href="safehome&facilitybiocare.html#services">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="service-areas.html">Service Areas</a></li>
+            <li><a href="inspection.html" class="btn-outline">Get a Free Inspection</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="service-hero">
+        <div class="container">
+            <h1><i class="fas fa-biohazard"></i> Biohazard Decontamination</h1>
+            <p>Restore safety after infestations</p>
+        </div>
+    </div>
+
+    <div class="container service-content">
+        <div class="service-text">
+            <h2>We clean what others won't touch</h2>
+            <p>Rodent droppings, urine, nesting materials, and decomposed carcasses carry dangerous diseases (hantavirus, leptospirosis, salmonella). Our team uses hospital‑grade disinfectants and full PPE.</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Removal of all contaminated materials (insulation, droppings, nests)</li>
+                <li><i class="fas fa-check-circle"></i> HEPA vacuuming of droppings and dust to prevent airborne particles</li>
+                <li><i class="fas fa-check-circle"></i> Fogging with virucidal & bactericidal agents (EN standard)</li>
+                <li><i class="fas fa-check-circle"></i> Odour neutralisation with ozone treatment where needed</li>
+                <li><i class="fas fa-check-circle"></i> Waste disposal in certified biohazard bags</li>
+                <li><i class="fas fa-check-circle"></i> Certificate of decontamination after completion</li>
+            </ul>
+            <a href="inspection.html" class="btn-primary"><i class="fas fa-broom"></i> Request Decontamination</a>
+        </div>
+        <div class="service-image">
+            <img src="https://media.istockphoto.com/id/1271711454/nl/foto/sanitaire-voorzieningen-in-de-fabriek-van-ambachtelijk-bier-de-kerels-in-beschermende-kostuums.jpg?s=612x612&w=0&k=20&c=dA1cIgoqEfqzK1SAzLczzqgRdyH__V-ny0-ijl7kCuQ=" alt="Technician in hazmat suit cleaning">
+        </div>
+    </div>
+
+    <div class="container cta-section">
+        <h3>Health risk? Don't DIY.</h3>
+        <p>Improper cleaning can spread disease. Leave it to certified professionals.</p>
+        <a href="inspection.html" class="btn-primary">Schedule Decontamination →</a>
+    </div>
+
+    <footer>
+        <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><h4>SafeHome & Facility BioCare</h4><p>Professional rodent control & decontamination, Kenya.</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><a href="safehome&facilitybiocare.html">Home</a><a href="safehome&facilitybiocare.html#about">About</a><a href="safehome&facilitybiocare.html#services">Services</a><a href="inspection.html">Free Inspection</a></div>
+            <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-phone"></i> +254 727004144</p><p><i class="fas fa-envelope"></i> info@safehomebiocare.co.ke</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 SafeHome & Facility BioCare – Protecting health, securing space.</p></div>
+    </div>
+</footer>
+</body>
+</html>

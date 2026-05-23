@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Free Inspection | SafeHome & Facility BioCare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #f8fafc 0%, #ecfdf5 100%); color: #1e2a3e; line-height: 1.5; min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .navbar { background: rgba(255,255,255,0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(44,122,77,0.2); position: sticky; top: 0; z-index: 100; width: 100%; }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 10px 24px; max-width: 1400px; margin: 0 auto; gap: 1rem; }
+        .logo h1 { font-family: 'Space Grotesk', monospace; font-size: 1.3rem; font-weight: 800; background: linear-gradient(135deg, #0f3b2c, #2c7a4d); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -0.02em; line-height: 1.2; }
+        .logo p { font-size: 0.6rem; font-weight: 600; color: #2c7a4d; letter-spacing: 0.8px; }
+        .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; flex-wrap: wrap; }
+        .nav-links li a { text-decoration: none; font-family: 'Inter','Space Grotesk',sans-serif; font-weight: 580; font-size: 0.9rem; padding: 0.3rem 0; position: relative; display: inline-block; transition: all 0.25s; background: linear-gradient(120deg,#0f2b1f,#2c5a3e); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .nav-links li a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0%; height: 2px; background: linear-gradient(95deg,#2c7a4d,#4c9f6e); border-radius: 4px; transition: width 0.35s; }
+        .nav-links li a:hover::after { width: 100%; }
+        .btn-outline { font-family: 'Inter','Space Grotesk',sans-serif; font-weight: 600; font-size: 0.85rem; background: transparent; border: 1.5px solid rgba(44,122,77,0.6); padding: 0.4rem 1.2rem; border-radius: 60px; color: #1f5a38; transition: 0.28s; display: inline-block; white-space: nowrap; }
+        .btn-outline:hover { background: linear-gradient(105deg,#2c7a4d,#226a42); border-color: transparent; color: white !important; transform: scale(1.02) translateY(-2px); }
+        .page-header { background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); padding: 1rem 0; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(44,122,77,0.2); }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .logo a { font-family: 'Space Grotesk', monospace; font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, #0f3b2c, #2c7a4d); -webkit-background-clip: text; background-clip: text; color: transparent; text-decoration: none; }
+        .back-home { color: #2c7a4d; text-decoration: none; font-weight: 600; transition: 0.2s; }
+        .back-home:hover { color: #1f5a38; }
+        .form-card { max-width: 850px; margin: 3rem auto; background: white; border-radius: 2rem; box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15); overflow: hidden; }
+        .form-header { background: linear-gradient(105deg, #e9f5ef, #d0e6db); padding: 2rem; text-align: center; }
+        .form-header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; color: #0a2e22; margin-bottom: 0.5rem; }
+        .form-body { padding: 2rem 2rem 2.5rem; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .full-width { grid-column: span 2; }
+        .input-group { display: flex; flex-direction: column; gap: 0.5rem; }
+        .input-group label { font-weight: 600; font-size: 0.9rem; color: #1f3b2f; }
+        .input-group input, .input-group select, .input-group textarea { padding: 0.9rem 1rem; border: 1.5px solid #e2ece6; border-radius: 1rem; font-family: 'Inter', sans-serif; font-size: 1rem; transition: 0.2s; background: #fefefe; }
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus { outline: none; border-color: #2c7a4d; box-shadow: 0 0 0 3px rgba(44,122,77,0.2); }
+        .checkbox-group { display: flex; align-items: center; gap: 0.8rem; margin: 1rem 0; }
+        .checkbox-group input { width: 1.2rem; height: 1.2rem; }
+        .btn-submit { background: #2c7a4d; color: white; border: none; padding: 1rem 1.8rem; font-size: 1.1rem; font-weight: 700; border-radius: 3rem; width: 100%; cursor: pointer; transition: 0.25s; display: flex; align-items: center; justify-content: center; gap: 0.7rem; }
+        .btn-submit:hover { background: #1f5a38; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(44,122,77,0.3); }
+        .trust-badge { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; padding-top: 1.5rem; border-top: 1px solid #e2ece6; }
+        .badge-item { display: flex; align-items: center; gap: 0.5rem; color: #2c5a3e; font-size: 0.85rem; font-weight: 500; }
+        .badge-item i { font-size: 1.2rem; }
+        .success-message { background: #e9f5ef; border-left: 4px solid #2c7a4d; padding: 1rem; border-radius: 1rem; margin-bottom: 1.5rem; display: none; align-items: center; gap: 0.8rem; }
+        .success-message.show { display: flex; }
+        footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: #5b6e5c; }
+        @media (max-width: 700px) { .form-grid { grid-template-columns: 1fr; } .full-width { grid-column: span 1; } .form-body { padding: 1.5rem; } .form-header h1 { font-size: 1.6rem; } }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <div class="container header-inner">
+            <div class="logo"><a href="index.html">SafeHome<span style="color:#2c7a4d;">&</span>Facility BioCare</a></div>
+            <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-card">
+            <div class="form-header"><h1><i class="fas fa-clipboard-list"></i> Free Inspection Request</h1><p>Fill in your details – one of our experts will contact you within 24 hours</p></div>
+            <div class="form-body">
+                <div id="successMsg" class="success-message"><i class="fas fa-check-circle" style="font-size:1.5rem;color:#2c7a4d;"></i><span><strong>Request sent!</strong> Thank you. We'll reach out shortly.</span></div>
+                <form id="inspectionForm" action="https://formspree.io/f/mdajgkbr" method="POST">
+                    <div class="form-grid">
+                        <div class="input-group"><label>Full name *</label><input type="text" name="fullname" required placeholder="John Mwangi"></div>
+                        <div class="input-group"><label>Phone number *</label><input type="tel" name="phone" required placeholder="+254 7XX XXX XXX"></div>
+                        <div class="input-group"><label>Email address</label><input type="email" name="email" placeholder="hello@example.com"></div>
+                        <div class="input-group"><label>County / City *</label><input type="text" name="location" required placeholder="Nairobi, Mombasa..."></div>
+                        <div class="input-group"><label>Service of interest</label><select name="service"><option value="">-- Select service --</option><option>Rodent Inspection</option><option>Rodent Control / Extermination</option><option>Rodent Proofing</option><option>Decontamination & Biohazard Cleaning</option><option>Fogging / Disinfection</option><option>Monitoring Solutions</option></select></div>
+                        <div class="input-group"><label>Preferred date (optional)</label><input type="date" name="preferredDate"></div>
+                        <div class="input-group full-width"><label>Property address or details</label><textarea rows="3" name="message" placeholder="House/business address, specific concerns..."></textarea></div>
+                    </div>
+                    <div class="checkbox-group"><input type="checkbox" name="consent" value="yes" required><label>I agree to be contacted.</label></div>
+                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Submit Request</button>
+                </form>
+                <div class="trust-badge"><div class="badge-item"><i class="fas fa-shield-alt"></i> No obligation</div><div class="badge-item"><i class="fas fa-clock"></i> 24h response</div><div class="badge-item"><i class="fas fa-lock"></i> Data secure</div><div class="badge-item"><i class="fas fa-headset"></i> Free consultation</div></div>
+            </div>
+        </div>
+    </div>
+    <footer><p>© 2026 SafeHome & Facility BioCare – Professional rodent control & decontamination, Nairobi & all counties of Kenya.</p></footer>
+    <script>
+        const form = document.getElementById('inspectionForm');
+        const successDiv = document.getElementById('successMsg');
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.ok) {
+                        successDiv.classList.add('show');
+                        form.reset();
+                        successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        setTimeout(() => successDiv.classList.remove('show'), 6000);
+                    } else alert('Form error: ' + (result.error || 'Unknown issue'));
+                } else alert('Submission failed. Please try again.');
+            } catch (error) { alert('Network error: ' + error.message); }
+        });
+    </script>
+</body>
+</html>
